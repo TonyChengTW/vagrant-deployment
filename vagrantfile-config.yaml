@@ -1,0 +1,36 @@
+# Edit by Tony Cheng 
+# Email : tonycheng@cloudcube.com.tw
+#
+
+# global parameters
+#
+provider: libvirt
+local_sync_folder: "/home/jenkins/vagrant-deployserver"
+
+# provider : libvirt
+# 
+#===============================================
+# libvirt
+#
+libvirt_host: "127.0.0.1"
+libvirt_driver: kvm
+libvirt_username: jenkins
+libvirt_connect_via_ssh: true
+libvirt_storage_pool_name: default
+libvirt_nested: true
+libvirt_dev: br0
+libvirt_type: bridge
+libvirt_mode: bridge
+libvirt_mgmt_mode: nat
+
+#===============================================
+#  deployserver
+#
+imagename_deployserver: "centos/7"
+hostname_deployserver: "deployserver"
+memory_deployserver: 2048
+cpus_deployserver: 2
+libvirt_vagrantmgmt_ip_deployserver: "172.20.177.0/24"
+libvirt_mgmt_mac_deployserver: "52:54:00:ed:be:50"
+libvirt_mgmt_ip_deployserver: "172.20.178.100"
+libvirt_mgmt_netmask_deployserver: "255.255.255.0"
